@@ -3,7 +3,9 @@
 **Kostenlos. Ohne Abo, ohne Anmeldung, ohne Werbung, ohne Cloud.**
 Das Beste aus JRT, RaceLabs, P1Doks, iOverlay und irDrive in einem Tool.
 
-### [⬇ GarageOverlay.exe herunterladen](https://github.com/MCSmug/garage-overlay/releases/latest)
+### [⬇ Garage Overlay herunterladen (Installer)](https://github.com/MCSmug/garage-overlay/releases/latest/download/GarageOverlay-Setup.exe)
+
+Overlays **und Setup-Garage** in einem – mit Updates per Klick direkt in der App.
 
 ![Garage Overlay im Rennen](bilder/vorschau_boxenfunk.png)
 
@@ -11,12 +13,12 @@ Das Beste aus JRT, RaceLabs, P1Doks, iOverlay und irDrive in einem Tool.
 
 ## Installation
 
-1. **[GarageOverlay.exe](https://github.com/MCSmug/garage-overlay/releases/latest)** herunterladen (unter „Assets“).
-2. In einen festen Ordner legen, z. B. `C:\GarageOverlay\`, und starten. Kein Installer, kein .NET nötig.
-3. Windows fragt beim ersten Start evtl. nach („Der Computer wurde durch Windows geschützt“) → **Weitere Informationen → Trotzdem ausführen**.
+1. **[GarageOverlay-Setup.exe](https://github.com/MCSmug/garage-overlay/releases/latest/download/GarageOverlay-Setup.exe)** herunterladen und doppelklicken.
+2. Windows fragt evtl. nach („Der Computer wurde durch Windows geschützt“) → **Weitere Informationen → Trotzdem ausführen**.
+3. Installer durchklicken – keine Admin-Rechte nötig, kein .NET, kein Python. Danach steht **Garage Overlay** im Startmenü.
 4. iRacing starten – die Overlays erscheinen, sobald du im Auto sitzt, im Replay oder als Zuschauer.
 
-**Update:** Gibt es eine neue Version, zeigt das Steuerfenster links unten **„NEUE VERSION ↓“**. Alte Version über das Taskleisten-Symbol beenden, neue exe starten – deine Einstellungen bleiben erhalten (`%APPDATA%\GarageOverlay`).
+**Updates:** Gibt es eine neue Version, zeigt das Steuerfenster links unten **„NEUE VERSION ↓“**. Ein Klick lädt sie herunter (mit Fortschrittsbalken), installiert sie und startet neu. Deine Einstellungen und die Daten der Setup-Garage bleiben erhalten (`%APPDATA%\GarageOverlay`).
 
 ## Bedienung
 
@@ -66,4 +68,4 @@ Jedes Overlay gibt es als **Browserquelle mit transparentem Hintergrund**: Steue
 
 ### English
 
-Free iRacing overlays – no subscription, no account, no ads. Download **[GarageOverlay.exe](https://github.com/MCSmug/garage-overlay/releases/latest)** and run it (no installer, no .NET required). Relative, standings, fuel, pit stop prediction, weather & tyres, radar, inputs, delta, track map, flags, OBS browser sources. The interface is currently in German.
+Free iRacing overlays – no subscription, no account, no ads. Download **[GarageOverlay-Setup.exe](https://github.com/MCSmug/garage-overlay/releases/latest/download/GarageOverlay-Setup.exe)** and run it (no admin rights, no .NET or Python required, one-click updates in the app). Relative, standings, fuel, pit stop prediction, weather & tyres, radar, inputs, delta, track map, flags, OBS browser sources. The interface is currently in German.
