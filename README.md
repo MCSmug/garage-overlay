@@ -23,8 +23,9 @@ Das Beste aus JRT, RaceLabs, P1Doks, iOverlay und irDrive in einem Tool.
 | | |
 |---|---|
 | **Steuerfenster** | Doppelklick aufs Taskleisten-Symbol – Overlays an/aus, Spalten, Farben, Profile |
-| **Verschieben** | „Bearbeiten“ einschalten, Overlay mit der Maus ziehen |
-| **Größe** | im Bearbeiten-Modus **Mausrad** – oder am **rechten/unteren Rand ziehen** (Breite / Anzahl Zeilen) |
+| **Verschieben** | **Strg + Umschalt + O** (oder Knopf „Overlays verschieben“), dann Overlay mit der Maus ziehen |
+| **Größe** | im Verschiebe-Modus **Mausrad** – oder am **rechten/unteren Rand ziehen** (Breite / Anzahl Zeilen) |
+| **Alle Overlays aus/ein** | Strg + Umschalt + H |
 | **Profil wechseln** | Strg + Umschalt + P (oder automatisch je Training / Quali / Rennen) |
 | **Sprit an iRacing senden** | Strg + Umschalt + F |
 
