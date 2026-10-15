@@ -53,6 +53,21 @@ Overlays **und Setup-Garage** in einem – mit Updates per Klick direkt in der A
 ![Wetter und Reifen](bilder/vorschau_wetter_reifen.png)
 ![Flaggen und Verkehr](bilder/vorschau_flaggen_verkehr.png)
 
+## Setup-Garage – deine Telemetrie-Auswertung
+
+Die Setup-Garage ist fest eingebaut (Steuerfenster → **Setup-Garage**) und läuft komplett auf deinem PC – ohne KI, ohne Internet:
+
+- **Wertet jede Session automatisch aus**, sobald iRacing die Telemetrie (.ibt) geschrieben hat – Training, Quali und Rennen.
+- **Mein Setup:** welches Setup du gefahren bist, Bestzeit, Konstanz, saubere Runden, Spritverbrauch – und ein konkreter **nächster Schritt** (welcher Klick am Setup).
+- **Vorher / Nachher:** neuer Setup-Stand gegen den alten – schneller oder langsamer, in welchen Kurven, was geändert wurde, ob der Vergleich fair ist (Temperatur, Nässe).
+- **Handling-Diagnose:** Unter-/Übersteuern je Kurve (Eingang, Mitte, Ausgang) aus Lenkung, Gierrate und Gas – nur Muster, die sich wiederholen.
+- **Wo die Zeit liegt:** Kurve für Kurve gegen deine beste Durchfahrt, mit Tipps („Lenkung früher öffnen“, „30 m früher Vollgas“).
+- **Setup-Vergleich:** dein Setup gegen ein schnelleres – Sektoren, Speed, Gas & Bremse, Fahrlinie auf der Karte.
+- **Referenzrunden:** .ibt eines schnelleren Fahrers einlegen – erscheint als Vergleich im Kurven-Coach.
+- **Handy im WLAN** (optional): die Garage auf Handy oder Tablet öffnen.
+
+Beim ersten Start fragt die Garage nach deinem iRacing-Telemetrie-Ordner (meist automatisch erkannt). Deine Daten liegen in `%APPDATA%\GarageOverlay\garage` – **Sichern = diesen Ordner kopieren.**
+
 ## Für Streamer (OBS)
 
 Jedes Overlay gibt es als **Browserquelle mit transparentem Hintergrund**: Steuerfenster → „OBS / Stream“ → Adresse kopieren → in OBS „Quelle hinzufügen → Browser“. So geht auch „nur im Stream, nicht auf meinem Bildschirm“.
@@ -61,11 +76,13 @@ Jedes Overlay gibt es als **Browserquelle mit transparentem Hintergrund**: Steue
 
 - **Ist das erlaubt?** Ja. Das Overlay liest nur die offizielle iRacing-Telemetrie – dieselbe Schnittstelle wie JRT, RaceLabs & Co. Es verändert nichts an iRacing.
 - **Kostet das was?** Nein, und das bleibt so.
-- **Hersteller-Logos fehlen?** Logos werden aus Markenrechtsgründen nicht mitgeliefert. Eigene PNGs in `%APPDATA%\GarageOverlay\logos\` legen (z. B. `Ferrari.png`) – oder eine vorhandene JRT-Installation wird automatisch genutzt.
+- **Hersteller-Logos:** Für die gängigen Marken sind einfarbige Symbole dabei ([simple-icons](https://simpleicons.org), CC0; die Marken gehören den Herstellern). Lieber farbige? Eigene PNGs in `%APPDATA%\GarageOverlay\logos\` legen (z. B. `Ferrari.png`) – oder eine vorhandene JRT-Installation wird automatisch genutzt.
+- **Läuft es neben JRT, RaceLabs & Co.?** Ja, alle lesen dieselbe Telemetrie gleichzeitig.
+- **Deinstallieren?** Windows-Einstellungen → Apps → „Garage Overlay“. Deine Daten in `%APPDATA%\GarageOverlay` bleiben dabei erhalten (bei Bedarf von Hand löschen).
 - **Fehler gefunden / Wunsch?** Gern als [Issue](https://github.com/MCSmug/garage-overlay/issues) – am besten mit Bildschirmfoto und der Datei `%APPDATA%\GarageOverlay\overlay.log`.
 
 ---
 
 ### English
 
-Free iRacing overlays – no subscription, no account, no ads. Download **[GarageOverlay-Setup.exe](https://github.com/MCSmug/garage-overlay/releases/latest/download/GarageOverlay-Setup.exe)** and run it (no admin rights, no .NET or Python required, one-click updates in the app). Relative, standings, fuel, pit stop prediction, weather & tyres, radar, inputs, delta, track map, flags, OBS browser sources. The interface is currently in German.
+Free iRacing overlays plus a built-in telemetry analysis ("Setup-Garage") – no subscription, no account, no ads. Download **[GarageOverlay-Setup.exe](https://github.com/MCSmug/garage-overlay/releases/latest/download/GarageOverlay-Setup.exe)** and run it (no admin rights, no .NET or Python required, one-click updates in the app). Relative, standings, fuel, pit stop prediction, weather & tyres, radar, inputs, delta, track map, flags, OBS browser sources. The interface is currently in German.
