@@ -7,6 +7,8 @@ Das Beste aus JRT, RaceLabs, P1Doks, iOverlay und irDrive in einem Tool.
 
 Overlays **und Setup-Garage** in einem – mit Updates per Klick direkt in der App.
 
+Website mit Bildern und Fragen: **[mcsmug.github.io/garage-overlay](https://mcsmug.github.io/garage-overlay/)** (Deutsch) · [English](https://mcsmug.github.io/garage-overlay/en/)
+
 ![Garage Overlay im Rennen](bilder/vorschau_boxenfunk.png)
 
 ---
@@ -32,6 +34,16 @@ Overlays **und Setup-Garage** in einem – mit Updates per Klick direkt in der A
 | **Sprit an iRacing senden** | Strg + Umschalt + F |
 
 ![Steuerfenster](bilder/vorschau_steuerfenster.png)
+
+## So funktioniert es
+
+| | |
+|---|---|
+| **Was es braucht** | Windows 10/11 und iRacing. Das Overlay liest die Live-Schnittstelle von iRacing (dieselbe wie JRT oder RaceLab). Kein Konto, keine Anmeldung, keine Aufzeichnung nötig. |
+| **Was es an Leistung kostet** | Wenig. Niedrige Prozess-Priorität (iRacing bekommt immer zuerst Rechenzeit), Telemetrie höchstens 30-mal pro Sekunde, jedes Overlay zeichnet 5- bis 15-mal pro Sekunde. Die Statuszeile unten im Steuerfenster zeigt die gemessene Last in Millisekunden pro Sekunde. Bei knapper Bildrate: **Schonmodus** einschalten. |
+| **Nur die Overlays?** | Ja. Die Setup-Garage ist ein eigenes Programm und läuft nur mit dem Häkchen **„Setup-Garage mitstarten“** (Start → Allgemein). Ohne Häkchen: nur Overlays, keine Auswertung, kein zweiter Prozess. Umgekehrt geht es auch: Garage an, alle Overlays aus. |
+| **Was es nicht tut** | Es schreibt nie in deine Setup-Dateien und ändert nichts an iRacing. Es lädt nichts hoch: Telemetrie, Auswertung und Einstellungen bleiben auf deinem PC. Ins Internet geht es nur für die Update-Prüfung (GitHub) und, wenn eingeschaltet, für den Twitch-/YouTube-Chat. |
+| **Sprachen** | Deutsch, Englisch, Französisch, Spanisch – umschaltbar unter Start → Allgemein. |
 
 ## Overlays
 
@@ -76,7 +88,10 @@ Jedes Overlay gibt es als **Browserquelle mit transparentem Hintergrund**: Steue
 
 - **Ist das erlaubt?** Ja. Das Overlay liest nur die offizielle iRacing-Telemetrie – dieselbe Schnittstelle wie JRT, RaceLabs & Co. Es verändert nichts an iRacing.
 - **Kostet das was?** Nein, und das bleibt so.
-- **Hersteller-Logos:** Für die gängigen Marken sind einfarbige Symbole dabei ([simple-icons](https://simpleicons.org), CC0; die Marken gehören den Herstellern). Lieber farbige? Eigene PNGs in `%APPDATA%\GarageOverlay\logos\` legen (z. B. `Ferrari.png`) – oder eine vorhandene JRT-Installation wird automatisch genutzt.
+- **Braucht es viel Leistung?** Nein, siehe „So funktioniert es“. Die Statuszeile im Steuerfenster zeigt die gemessene Last; wer Ruckler sieht, schaltet den Schonmodus ein und schickt die `overlay.log`.
+- **Kann ich nur die Overlays nutzen, ohne Telemetrie-Auswertung?** Ja – Häkchen „Setup-Garage mitstarten“ abwählen. Die Overlays brauchen keine Aufzeichnung, sie lesen nur die Live-Daten, die iRacing ohnehin bereitstellt.
+- **Was macht die Setup-Garage genau?** Sie liest nach jeder Session die Telemetrie-Datei (.ibt), die iRacing selbst schreibt, und zeigt, wo die Zeit liegt, ob das Auto über- oder untersteuert und welcher Klick am Setup hilft. Alles lokal, ohne Internet. Umsetzen tust du den Vorschlag selbst in iRacing.
+- **Hersteller-Logos:** Für die gängigen Marken sind Embleme in Originalfarben dabei (aus Formen und [simple-icons](https://simpleicons.org)-Symbolen, CC0; die Marken gehören den Herstellern). Unter Start → Allgemein umschaltbar auf Plättchen, Markenfarbe oder Weiß. Eigene PNGs in `%APPDATA%\GarageOverlay\logos\` (z. B. `Ferrari.png`) gehen vor – ebenso eine vorhandene JRT-Installation.
 - **Läuft es neben JRT, RaceLabs & Co.?** Ja, alle lesen dieselbe Telemetrie gleichzeitig.
 - **Deinstallieren?** Windows-Einstellungen → Apps → „Garage Overlay“. Deine Daten in `%APPDATA%\GarageOverlay` bleiben dabei erhalten (bei Bedarf von Hand löschen).
 - **Fehler gefunden / Wunsch?** Gern als [Issue](https://github.com/MCSmug/garage-overlay/issues) – am besten mit Bildschirmfoto und der Datei `%APPDATA%\GarageOverlay\overlay.log`.
@@ -85,4 +100,4 @@ Jedes Overlay gibt es als **Browserquelle mit transparentem Hintergrund**: Steue
 
 ### English
 
-Free iRacing overlays plus a built-in telemetry analysis ("Setup-Garage") – no subscription, no account, no ads. Download **[GarageOverlay-Setup.exe](https://github.com/MCSmug/garage-overlay/releases/latest/download/GarageOverlay-Setup.exe)** and run it (no admin rights, no .NET or Python required, one-click updates in the app). Relative, standings, fuel, pit stop prediction, weather & tyres, radar, inputs, delta, track map, flags, OBS browser sources. The interface is currently in German.
+Free iRacing overlays plus a built-in telemetry analysis ("Setup-Garage") – no subscription, no account, no ads. Download **[GarageOverlay-Setup.exe](https://github.com/MCSmug/garage-overlay/releases/latest/download/GarageOverlay-Setup.exe)** and run it (no admin rights, no .NET or Python required, one-click updates in the app). Relative, standings, fuel, pit stop prediction, weather & tyres, radar, inputs, delta, track map, flags, OBS browser sources. The interface is available in German, English, French and Spanish (Start → General). Overlays and the Setup Garage can be used independently: untick “Start Setup Garage too” for overlays only. Nothing is uploaded, nothing is written to your iRacing setups.
