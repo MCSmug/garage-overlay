@@ -65,6 +65,7 @@
   .step::before { counter-increment: s; content: counter(s); font-family: var(--display); font-size: 34px; color: var(--orange); display: block; font-style: oblique 9deg; }
   .step h3 { font-family: var(--sub); font-weight: 500; font-size: 27px; letter-spacing: .06em; text-transform: uppercase; margin: 6px 0 6px; }
   .step p { margin: 0; color: var(--fg-dim); }
+  .how .step::before { display: none; }
   code { font-family: "Barlow", monospace; background: var(--bg-3); padding: 1px 6px; border-radius: 3px; color: var(--fg); }
 
   .garage { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
@@ -95,7 +96,7 @@
 <div class="wrap">
   <header class="top">
     <a class="brand" href="#top"><span class="stripes"><i></i><i></i><i></i></span><b>GARAGE OVERLAY</b></a>
-    <div class="right"><nav class="menu"><a href="#overlays">Overlays</a><a href="#engineer">Renningenieur</a><a href="#garage">Setup-Garage</a><a href="#start">Einrichten</a><a href="#faq">Fragen</a></nav><a class="lang" href="en/" hreflang="en" lang="en" title="English version">EN</a></div>
+    <div class="right"><nav class="menu"><a href="#overlays">Overlays</a><a href="#engineer">Renningenieur</a><a href="#garage">Setup-Garage</a><a href="#how">So funktioniert es</a><a href="#start">Einrichten</a><a href="#faq">Fragen</a></nav><a class="lang" href="en/" hreflang="en" lang="en" title="English version">EN</a></div>
   </header>
 </div>
 <hr class="gradline">
@@ -221,6 +222,14 @@
   </div>
 </section>
 
+<section id="how">
+  <div class="wrap">
+    <h2>So funktioniert es</h2>
+    <p class="sub">Was das Programm braucht, was es kostet und was es nicht tut</p>
+    <div class="steps how"><div class="step"><h3>Was es braucht</h3><p>Windows 10 oder 11 und iRacing. Das Overlay liest die Live-Schnittstelle von iRacing, dieselbe wie JRT oder RaceLab. Kein Konto, keine Anmeldung, keine Aufzeichnung nötig. Beim Start sucht es iRacing selbst und wartet, bis du im Auto sitzt.</p></div><div class="step"><h3>Was es an Leistung kostet</h3><p>Wenig. Das Overlay läuft mit niedriger Priorität, iRacing bekommt immer zuerst Rechenzeit. Die Telemetrie wird höchstens 30-mal pro Sekunde gelesen, jedes Overlay zeichnet nur 5- bis 15-mal pro Sekunde. Unten im Steuerfenster steht, wie viele Millisekunden pro Sekunde es gerade braucht. Wer iRacing am Limit fährt, schaltet den Schonmodus ein.</p></div><div class="step"><h3>Nur die Overlays?</h3><p>Ja. Die Setup-Garage ist ein eigenes Programm und läuft nur, wenn das Häkchen „Setup-Garage mitstarten“ gesetzt ist. Ohne Häkchen gibt es nur die Overlays, ohne Auswertung und ohne zweiten Prozess. Umgekehrt geht es auch: Garage an, alle Overlays aus.</p></div><div class="step"><h3>Was es nicht tut</h3><p>Es schreibt nie in deine Setup-Dateien und ändert nichts an iRacing. Es lädt nichts hoch: Telemetrie, Auswertung und Einstellungen bleiben auf deinem PC. Ins Internet geht es nur für die Update-Prüfung bei GitHub und, wenn du es einschaltest, für den Twitch- oder YouTube-Chat.</p></div></div>
+  </div>
+</section>
+
 <section id="start">
   <div class="wrap">
     <h2>In drei Schritten drin</h2>
@@ -233,7 +242,7 @@
   <div class="wrap">
     <h2>Fragen</h2>
     <p class="sub">Was am häufigsten kommt</p>
-    <div class="faq"><details><summary>Was kostet das?</summary><p>Nichts. Keine Pro-Stufe fürs Overlay, keine Werbung, kein Abo. Der Quellcode ist offen (MIT-Lizenz).</p></details><details><summary>Kostet es Bildrate?</summary><p>Das Overlay läuft mit niedriger Priorität, iRacing bekommt immer zuerst Rechenzeit. Es zeichnet nur so oft, wie ein Overlay es braucht, und im Grafikkarten-Modus übernimmt Windows die Transparenz. Wer trotzdem Ruckler sieht, schaltet den Schonmodus ein und schickt das Log, dann schauen wir rein.</p></details><details><summary>Geht das auch im Stream?</summary><p>Ja. Jedes Overlay gibt es als Browser-Quelle für OBS, die Adresse steht im Steuerfenster beim jeweiligen Overlay. So läuft ein Overlay nur im Stream, ohne auf deinem Bildschirm zu liegen.</p></details><details><summary>Ändert es etwas an meinen Setups?</summary><p>Nein. Weder das Overlay noch die Setup-Garage schreiben in iRacing-Dateien. Die Garage liest Telemetrie und macht Vorschläge, umsetzen tust du sie selbst in iRacing.</p></details><details><summary>Wie bekomme ich Updates?</summary><p>Das Overlay prüft beim Öffnen des Steuerfensters und einmal pro Stunde, ob es eine neue Version gibt, und installiert sie auf Knopfdruck. Die Installation läuft durch, das Overlay startet danach neu.</p></details><details><summary>Etwas fehlt oder ist kaputt. Wohin damit?</summary><p>Ein Screenshot und ein Satz reichen, am besten mit der overlay.log aus dem Log-Ordner (Link unten im Steuerfenster). Entweder auf GitHub unter <a href="https://github.com/MCSmug/garage-overlay/issues">Issues</a> oder direkt im Discord.</p></details></div>
+    <div class="faq"><details><summary>Was kostet das?</summary><p>Nichts. Keine Pro-Stufe fürs Overlay, keine Werbung, kein Abo. Der Quellcode ist offen (MIT-Lizenz).</p></details><details><summary>Braucht es viel Leistung vom PC?</summary><p>Nein. Niedrige Prozess-Priorität, Telemetrie höchstens 30-mal pro Sekunde, Overlays 5- bis 15-mal pro Sekunde, im Grafikkarten-Modus übernimmt Windows die Transparenz. Die Statuszeile im Steuerfenster zeigt die gemessene Last. Wer trotzdem Ruckler sieht, schaltet den Schonmodus ein und schickt das Log, dann schauen wir rein.</p></details><details><summary>Kann ich nur die Overlays nutzen, ohne Telemetrie-Auswertung?</summary><p>Ja. Die Setup-Garage ist abschaltbar (Start → Allgemein → „Setup-Garage mitstarten“). Die Overlays brauchen keine Aufzeichnung, sie lesen nur die Live-Daten, die iRacing ohnehin bereitstellt.</p></details><details><summary>Was macht die Setup-Garage genau?</summary><p>Sie liest nach jeder Session die Telemetrie-Datei, die iRacing selbst schreibt, und zeigt dir, wo die Zeit liegt, ob das Auto über- oder untersteuert und welcher Klick am Setup dagegen hilft. Alles auf deinem PC, ohne Internet. Umsetzen tust du den Vorschlag selbst in iRacing.</p></details><details><summary>Geht das auch im Stream?</summary><p>Ja. Jedes Overlay gibt es als Browser-Quelle für OBS, die Adresse steht im Steuerfenster beim jeweiligen Overlay. So läuft ein Overlay nur im Stream, ohne auf deinem Bildschirm zu liegen.</p></details><details><summary>Ändert es etwas an meinen Setups?</summary><p>Nein. Weder das Overlay noch die Setup-Garage schreiben in iRacing-Dateien. Die Garage liest Telemetrie und macht Vorschläge, umsetzen tust du sie selbst in iRacing.</p></details><details><summary>Wie bekomme ich Updates?</summary><p>Das Overlay prüft beim Öffnen des Steuerfensters und einmal pro Stunde, ob es eine neue Version gibt, und installiert sie auf Knopfdruck. Die Installation läuft durch, das Overlay startet danach neu.</p></details><details><summary>Etwas fehlt oder ist kaputt. Wohin damit?</summary><p>Ein Screenshot und ein Satz reichen, am besten mit der overlay.log aus dem Log-Ordner (Link unten im Steuerfenster). Entweder auf GitHub unter <a href="https://github.com/MCSmug/garage-overlay/issues">Issues</a> oder direkt im Discord.</p></details></div>
   </div>
 </section>
 
