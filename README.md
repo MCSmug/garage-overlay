@@ -86,7 +86,7 @@ Jedes Overlay gibt es als **Browserquelle mit transparentem Hintergrund**: Steue
 
 ## Häufige Fragen
 
-- **Ist das erlaubt?** Ja. Das Overlay liest nur die offizielle iRacing-Telemetrie – dieselbe Schnittstelle, die alle Overlay-Programme nutzen Es verändert nichts an iRacing.
+- **Ist das erlaubt?** Ja. Das Overlay liest nur die offizielle iRacing-Telemetrie – dieselbe Schnittstelle, die alle Overlay-Programme nutzen. Es verändert nichts an iRacing.
 - **Kostet das was?** Nein, und das bleibt so.
 - **Braucht es viel Leistung?** Nein, siehe „So funktioniert es“. Die Statuszeile im Steuerfenster zeigt die gemessene Last; wer Ruckler sieht, schaltet den Schonmodus ein und schickt die `overlay.log`.
 - **Kann ich nur die Overlays nutzen, ohne Telemetrie-Auswertung?** Ja – Häkchen „Setup-Garage mitstarten“ abwählen. Die Overlays brauchen keine Aufzeichnung, sie lesen nur die Live-Daten, die iRacing ohnehin bereitstellt.
