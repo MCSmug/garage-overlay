@@ -1,7 +1,8 @@
 {
-  "team-40ae2a2da33098b90e5ff0f260c23f9519731022ef9fb7a59aa5893d38afb1fe": true,
-  "obs": true,
   "broadcast": true,
+  "obs": true,
   "stint": true,
-  "team": true
+  "team": true,
+  "team-40ae2a2da33098b90e5ff0f260c23f9519731022ef9fb7a59aa5893d38afb1fe": true,
+  "team-e3d0ddc37bf1a2ea627e7810fb5c947987ac1d9358069c8afb58069396876efa": true
 }
